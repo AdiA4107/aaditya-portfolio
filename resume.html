@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Aaditya Agarwal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .page-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #8B0000;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .back-button:hover {
+            color: #A52A2A;
+        }
+        
+        .page-title {
+            font-size: 2.5rem;
+            color: #8B0000;
+            margin-bottom: 1rem;
+        }
+        
+        .resume-container {
+            background: white;
+            border: 2px solid #8B0000;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.1);
+            height: 80vh;
+        }
+        
+        .resume-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+        
+        .download-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #8B0000, #A52A2A);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.2);
+        }
+        
+        .download-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="page-content">
+        <a href="index.html" class="back-button">← Back to Portfolio</a>
+        
+        <h1 class="page-title">Resume</h1>
+        
+        <div class="resume-container">
+            <iframe src="Aaditya Agarwal Final Resume copy.pdf" class="resume-iframe"></iframe>
+        </div>
+        
+        <div style="text-align: center; margin-top: 1rem;">
+            <a href="Aaditya Agarwal Final Resume copy.pdf" target="_blank" class="download-button">
+                Download Resume
+            </a>
+        </div>
+    </div>
+</body>
+</html> 

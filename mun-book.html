@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUN Book - Aaditya Agarwal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .page-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .back-button:hover {
+            color: #f0f0f0;
+        }
+        
+        .page-title {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+        
+        .content-section {
+            background: white;
+            border: 2px solid #8B0000;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.1);
+        }
+        
+        .book-cover {
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto 2rem;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.3);
+            border: 2px solid #8B0000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .book-cover:hover {
+            transform: scale(2.4);
+            box-shadow: 0 12px 35px rgba(139, 0, 0, 0.4);
+            z-index: 10;
+            position: relative;
+        }
+        
+        .book-info {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .book-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #8B0000;
+            margin-bottom: 0.5rem;
+        }
+        
+        .book-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .book-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #8B0000;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .read-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #8B0000, #A52A2A);
+            color: white;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.2);
+        }
+        
+        .read-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.3);
+        }
+        
+        .book-cover-container {
+            margin: 0 auto 2rem;
+            text-align: center;
+        }
+        
+        .book-cover-placeholder {
+            width: 300px;
+            height: 400px;
+            background: linear-gradient(135deg, #8B0000, #A52A2A);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin: 0 auto;
+            position: relative;
+            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.3);
+        }
+        
+        .cover-text {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cover-subtitle {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+        
+        .view-cover-link {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .view-cover-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="page-content">
+        <a href="index.html" class="back-button">← Back to Portfolio</a>
+        
+        <h1 class="page-title">UNLocked: Mastering Model UN and Debate</h1>
+        
+        <div class="content-section">
+            <div class="book-info">
+                <div class="book-cover-container">
+                    <img src="Website Content/UNLocked Cover Page_page-0001.jpg" alt="UNLocked: Mastering Model UN and Debate Cover" class="book-cover">
+                </div>
+                
+                <div class="book-title">UNLocked: Mastering Model UN and Debate</div>
+                <div class="book-description">
+                    This book aims to dissect Model United Nations and Debate – first exploring what MUNs are, why you should participate in them, and then the bulk of the book discusses how you can improve your MUNning abilities. This is not a procedural handbook but rather a supplement to procedural guides. From Harvard, Boston to Brown University, Providence, from Calcutta to Delhi, and of course Mumbai, this book aims to provide insights built over years of not only my personal experience in 20+ MUNs but also interactions with some of the most seasoned MUNners. Adopting these strategies, like any experiential knowledge, is not as easy as studying them in theory – the most important thing to keep in mind is that these skills are developed over time. As you attend more conferences, you will develop your own nuanced version of these skills – the goal of this book is to expose you to strategies that you would only come across much later, or perhaps never.
+                </div>
+                
+                <div class="book-stats">
+                    <div class="stat">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Copies Sold</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="Website Content/UNLocked Final/UNLocked Final.pdf" target="_blank" class="read-button" style="color: white !important;">
+                        Read Full Book
+                    </a>
+                    <a href="https://a.co/d/4ShzF80" target="_blank" class="read-button" style="color: white !important; background: linear-gradient(135deg, #FF9500, #FFB84D);">
+                        View on Amazon
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="content-section">
+            <h2 style="color: #8B0000;">Foreword by Path Jindal</h2>
+            <p style="color: #8B0000;"><strong>Managing Director, JSW Cement, JSW Paints</strong></p>
+            <p style="color: #ffffff;">In a world that is increasingly shaped by contrasting ideas, dialogue and conversation- harnessing one's persuasive skills has become more important than ever. In many ways an individual's 'soft power' is determined by how succinctly they can put their point across as well as convince others on their position. In recent years, MUNs and Debates have become increasingly popular among high-school and college students with a love for Public Policy and International Relations. Personally, I too have benefited immensely from the MUN experience as it taught me the power of building consensus amongst a diverse group of peers. These activities are extremely enriching, building important skills such as public speaking and diplomacy, as well as offering dynamic and novel experiences. Aaditya has done a remarkable job to share his insights in a manner that can truly unlock value for all trying to make a mark in this increasingly competitive and unpredictable world.</p>
+        </div>
+        
+    </div>
+</body>
+</html> 

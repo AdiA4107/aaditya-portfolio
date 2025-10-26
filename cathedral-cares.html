@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cathedral Cares - Aaditya Agarwal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .page-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .back-button:hover {
+            color: #f0f0f0;
+        }
+        
+        .page-title {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .content-section {
+            background: white;
+            border: 2px solid #8B0000;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.1);
+        }
+        
+        .content-section h2,
+        .content-section h3,
+        .content-section p,
+        .content-section li {
+            color: #8B0000;
+        }
+        
+        .magazine-description {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #8B0000;
+        }
+        
+        .bookshelf {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 1rem;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, #8B0000, #A52A2A);
+            border-radius: 16px;
+            min-height: 200px;
+        }
+        
+        .book {
+            width: 80px;
+            height: 120px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border: 2px solid #8B0000;
+            border-radius: 4px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .book:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .book-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #8B0000;
+            margin-bottom: 0.3rem;
+            line-height: 1.1;
+        }
+        
+        .book-edition {
+            font-size: 0.6rem;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .book-spine {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(135deg, #8B0000, #A52A2A);
+        }
+        
+        .bookshelf-base {
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: linear-gradient(135deg, #654321, #8B4513);
+            border-radius: 0 0 8px 8px;
+        }
+        
+        .magazine-section {
+            margin-bottom: 3rem;
+        }
+        
+        .magazine-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-content">
+        <a href="index.html" class="back-button">← Back to Portfolio</a>
+        
+        <h1 class="page-title">Publications</h1>
+        
+        <div class="magazine-section">
+            <div class="content-section">
+                <h2>Cathedral Cares</h2>
+                <p class="magazine-description">A magazine to encourage student-volunteering, spreading awareness on important issues such as educational inequity and financial illiteracy among 600+ students.</p>
+                
+                <div class="bookshelf">
+                    <div class="book" onclick="window.open('Website Content/Cathedral Cares/Cathedral Cares July Edition copy.pdf', '_blank')">
+                        <div class="book-spine"></div>
+                        <div class="book-title">Cathedral Cares</div>
+                        <div class="book-edition">July 2024</div>
+                    </div>
+                    
+                    <div class="book" onclick="window.open('Website Content/Cathedral Cares/Cathedral Cares August Edition Final copy.pdf', '_blank')">
+                        <div class="book-spine"></div>
+                        <div class="book-title">Cathedral Cares</div>
+                        <div class="book-edition">August 2024</div>
+                    </div>
+                    
+                    <div class="book" onclick="window.open('Website Content/Cathedral Cares/Cathedral Cares September Edition copy.pdf', '_blank')">
+                        <div class="book-spine"></div>
+                        <div class="book-title">Cathedral Cares</div>
+                        <div class="book-edition">September 2024</div>
+                    </div>
+                    
+                    <div class="book" onclick="alert('October 2024 edition coming soon!')">
+                        <div class="book-spine"></div>
+                        <div class="book-title">Cathedral Cares</div>
+                        <div class="book-edition">October 2024</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="magazine-section">
+            <div class="content-section">
+                <h2>The World in Brief</h2>
+                <p class="magazine-description">Description for The World in Brief will be added here.</p>
+                
+                <div class="bookshelf">
+                    <div class="book" onclick="window.open('Website Content/The World in Brief/The World In Brief - The Symposium Newsletter (May Edition) copy.pdf', '_blank')">
+                        <div class="book-spine"></div>
+                        <div class="book-title">The World in Brief</div>
+                        <div class="book-edition">May 2024</div>
+                    </div>
+                    
+                    <div class="book" onclick="window.open('Website Content/The World in Brief/The World In Brief - The Symposium Newsletter (June Edition) copy.pdf', '_blank')">
+                        <div class="book-spine"></div>
+                        <div class="book-title">The World in Brief</div>
+                        <div class="book-edition">June 2024</div>
+                    </div>
+                    
+                    <div class="book" onclick="window.open('Website Content/The World in Brief/The World In Brief - The Symposium Newsletter (July Edition) copy.pdf', '_blank')">
+                        <div class="book-spine"></div>
+                        <div class="book-title">The World in Brief</div>
+                        <div class="book-edition">July 2024</div>
+                    </div>
+                    
+                    <div class="book" onclick="window.open('Website Content/The World in Brief/The World In Brief - The Symposium Newsletter (August Edition) (1) copy.pdf', '_blank')">
+                        <div class="book-spine"></div>
+                        <div class="book-title">The World in Brief</div>
+                        <div class="book-edition">August 2024</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="magazine-section">
+            <div class="content-section">
+                <h2>Decrypted</h2>
+                <p class="magazine-description">Description for Decrypted will be added here.</p>
+                
+                <div class="bookshelf">
+                    <div class="book" onclick="alert('Decrypted editions coming soon!')">
+                        <div class="book-spine"></div>
+                        <div class="book-title">Decrypted</div>
+                        <div class="book-edition">Edition 1</div>
+                    </div>
+                    
+                    <div class="book" onclick="alert('Decrypted editions coming soon!')">
+                        <div class="book-spine"></div>
+                        <div class="book-title">Decrypted</div>
+                        <div class="book-edition">Edition 2</div>
+                    </div>
+                    
+                    <div class="book" onclick="alert('Decrypted editions coming soon!')">
+                        <div class="book-spine"></div>
+                        <div class="book-title">Decrypted</div>
+                        <div class="book-edition">Edition 3</div>
+                    </div>
+                    
+                    <div class="book" onclick="alert('Decrypted editions coming soon!')">
+                        <div class="book-spine"></div>
+                        <div class="book-title">Decrypted</div>
+                        <div class="book-edition">Edition 4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="magazine-section">
+            <div class="content-section">
+                <h2>Mathematica</h2>
+                <p class="magazine-description">Description for Mathematica will be added here.</p>
+                
+                <div class="bookshelf">
+                    <div class="book" onclick="window.open('Website Content/Mathematica/Mathematica - July Edition.pdf', '_blank')">
+                        <div class="book-spine"></div>
+                        <div class="book-title">Mathematica</div>
+                        <div class="book-edition">July 2024</div>
+                    </div>
+                    
+                    <div class="book" onclick="window.open('Website Content/Mathematica/Mathematica - August Edition.pdf', '_blank')">
+                        <div class="book-spine"></div>
+                        <div class="book-title">Mathematica</div>
+                        <div class="book-edition">August 2024</div>
+                    </div>
+                    
+                    <div class="book" onclick="window.open('Website Content/Mathematica/Mathematica - September Edition.pdf', '_blank')">
+                        <div class="book-spine"></div>
+                        <div class="book-title">Mathematica</div>
+                        <div class="book-edition">September 2024</div>
+                    </div>
+                    
+                    <div class="book" onclick="alert('October 2024 edition coming soon!')">
+                        <div class="book-spine"></div>
+                        <div class="book-title">Mathematica</div>
+                        <div class="book-edition">October 2024</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

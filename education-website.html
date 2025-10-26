@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educate India Campaign - Aaditya Agarwal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            overflow-y: auto;
+        }
+        
+        .page-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            transition: color 0.3s ease;
+            align-self: flex-start;
+        }
+        
+        .back-button:hover {
+            color: #f0f0f0;
+        }
+        
+        .main-container {
+            background: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+        
+        .page-title {
+            font-size: 2rem;
+            color: #8B0000;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-subtitle {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 1rem;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .features-section {
+            margin-top: 1rem;
+        }
+        
+        .section-title {
+            color: #8B0000;
+            font-size: 1.3rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            border: 2px solid #8B0000;
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-title {
+            color: #8B0000;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-description {
+            color: #333;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .external-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #8B0000, #A52A2A);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.2);
+        }
+        
+        .external-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.3);
+        }
+        
+        /* Ensure button text is always white */
+        .external-link {
+            color: white !important;
+        }
+        
+        .external-link:hover {
+            color: white !important;
+        }
+        
+        .placeholder-text {
+            background: #f8f8f8;
+            padding: 1rem;
+            border-radius: 8px;
+            color: #666;
+            font-style: italic;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-content">
+        <a href="index.html" class="back-button">← Back to Portfolio</a>
+        
+        <div class="main-container">
+            <div class="header-section">
+                <img src="Website Content/Educate India Logo copy.png" alt="Educate India Logo" class="logo">
+                <h1 class="page-title">Educate India</h1>
+                <p class="page-subtitle">I launched Educate India as a portal to spread awareness on opportunities to obtain Scholarships and Loans for higher education among Indian students. I authored the Educate India Handbook, conducted seminars through the website, and hosted podcasts to guide students through the application process.</p>
+            </div>
+            
+            <div class="cta-section">
+                <a href="https://educateindia.co" class="external-link" target="_blank">
+                    Visit the Educate India website!
+                </a>
+            </div>
+            
+            <div class="features-section">
+                <h2 class="section-title">Key Features</h2>
+                
+                <div class="features-grid">
+                    <a href="https://www.educateindia.co/loans.html" target="_blank" class="feature-card">
+                        <h3 class="feature-title">EMI Calculator</h3>
+                        <p class="feature-description">A comprehensive EMI calculator that helps students calculate the cost of education loans for financial planning.</p>
+                    </a>
+                    
+                    <a href="https://www.educateindia.co/scholarships.html" target="_blank" class="feature-card">
+                        <h3 class="feature-title">Scholarship Finder</h3>
+                        <p class="feature-description">A database of scholarships tailored for different university types and student backgrounds to maximize funding opportunities.</p>
+                    </a>
+                    
+                    <a href="https://www.educateindia.co/loans.html" target="_blank" class="feature-card">
+                        <h3 class="feature-title">Loan Hub</h3>
+                        <p class="feature-description">A comprehensive resource featuring public and private loan options with detailed comparisons of their advantages and disadvantages.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

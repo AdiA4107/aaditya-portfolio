@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice for Change - Aaditya Agarwal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            overflow-y: auto;
+        }
+        
+        .page-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            transition: color 0.3s ease;
+            align-self: flex-start;
+        }
+        
+        .back-button:hover {
+            color: #f0f0f0;
+        }
+        
+        .main-container {
+            background: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header-section {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .logo {
+            width: 120px;
+            height: auto;
+            flex-shrink: 0;
+        }
+        
+        .header-text {
+            flex-grow: 1;
+        }
+        
+        .page-title {
+            font-size: 2rem;
+            color: #8B0000;
+            margin-bottom: 0.75rem;
+        }
+        
+        .page-subtitle {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stats-box {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-align: center;
+        }
+        
+        .stats-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #8B0000;
+            margin-bottom: 0.25rem;
+        }
+        
+        .stats-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .topics-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-title {
+            color: #8B0000;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+        
+        .topic-item {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 0.75rem;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+            color: #333;
+            font-weight: 500;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding-top: 1rem;
+        }
+        
+        .cta-description {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .external-link {
+            display: inline-block;
+            background: #ffffff;
+            color: #8B0000 !important;
+            border: 2px solid #8B0000;
+            padding: 0.75rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .external-link:hover {
+            background: #8B0000;
+            color: white !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="page-content">
+        <a href="index.html" class="back-button">← Back to Portfolio</a>
+        
+        <div class="main-container">
+            <div class="header-section">
+                <img src="Website Content/Voice for Change.png" alt="Voice for Change Logo" class="logo">
+                <div class="header-text">
+                    <h1 class="page-title">Voice for Change</h1>
+                    <p class="page-subtitle">I founded Voice for Change, an open letter forum for students across India, to enable students to harness the power of their voice to speak on topics such as educational policy, climate policy, economic inequality and social injustice.</p>
+                </div>
+            </div>
+            
+            <div class="content-grid">
+                <div class="stats-box">
+                    <div class="stats-number">300+</div>
+                    <div class="stats-label">Student Submissions from Across India</div>
+                </div>
+                <div class="stats-box">
+                    <div class="stats-number">India-Wide</div>
+                    <div class="stats-label">Open Letter Forum Platform</div>
+                </div>
+            </div>
+            
+            <div class="topics-section">
+                <h2 class="section-title">Key Focus Areas</h2>
+                <div class="topics-grid">
+                    <div class="topic-item">Educational Policy</div>
+                    <div class="topic-item">Climate Policy</div>
+                    <div class="topic-item">Economic Inequality</div>
+                    <div class="topic-item">Social Justice</div>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <p class="cta-description">The Open Letter website helps students through the process of coming up with an idea to write on, guidelines to follow for an Open Letter, along with past examples to get inspired!</p>
+                <a href="https://openletter.co.in" target="_blank" class="external-link">
+                    Visit Voice for Change Platform
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

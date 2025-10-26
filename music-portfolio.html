@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Portfolio - Aaditya Agarwal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <style>
+        .page-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .back-button:hover {
+            color: #f0f0f0;
+        }
+        
+        .page-title {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .content-section {
+            background: white;
+            border: 2px solid #8B0000;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.1);
+        }
+        
+        .music-item {
+            border-left: 4px solid #8B0000;
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .music-title {
+            font-weight: 600;
+            color: #8B0000;
+            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .music-category {
+            color: #8B0000;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .music-description {
+            color: #4a4a4a;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .placeholder-text {
+            background: #f8f8f8;
+            padding: 1rem;
+            border-radius: 8px;
+            color: #666;
+            font-style: italic;
+            text-align: center;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 1rem;
+            background: #f8f8f8;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .video-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #8B0000, #A52A2A);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        /* Certificates Section */
+        .certificates-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .certificates-box {
+            background: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .box-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #8B0000;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        /* Certificates Grid */
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .certificate-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .certificate-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.2);
+        }
+        
+        .certificate-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #8B0000;
+            margin-bottom: 0.75rem;
+            text-align: center;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .certificate-thumbnail {
+            width: 100%;
+            height: 350px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #f8f8f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .certificate-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox-content {
+            position: relative;
+            width: 90%;
+            max-width: 1000px;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .lightbox img {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: white;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+            background: none;
+            border: none;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .lightbox-close:hover {
+            color: #ccc;
+        }
+        
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            color: #8B0000;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 1rem;
+            border: none;
+            border-radius: 4px;
+            z-index: 1001;
+            transition: background 0.3s ease;
+        }
+        
+        .lightbox-nav:hover {
+            background: white;
+        }
+        
+        .lightbox-nav.prev {
+            left: 20px;
+        }
+        
+        .lightbox-nav.next {
+            right: 20px;
+        }
+        
+        .lightbox-title {
+            position: absolute;
+            top: -50px;
+            left: 0;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-content">
+        <a href="index.html" class="back-button">← Back to Portfolio</a>
+        
+        <h1 class="page-title">Music Portfolio</h1>
+        
+        <div class="content-section">
+            <div class="music-item">
+                <div class="music-title">Valse op. 64, no. 1</div>
+                <div class="music-category">Frédéric Chopin</div>
+                <div class="video-container">
+                    <div style="padding:82.32% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1130636420?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Valse, Op. 64 no. 1 (Frederic Chopin)"></iframe></div>
+                </div>
+            </div>
+            
+            <div class="music-item">
+                <div class="music-title">Allegro con brio (1st movt from Sonata in G, Hob XVI:27)</div>
+                <div class="music-category">Franz Joseph Haydn</div>
+                <div class="video-container">
+                    <div style="padding:69.72% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1130636263?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Allegro Con Brio, 1st Movt. from Sonata in G (Franz Joseph Haydn)"></iframe></div>
+                </div>
+            </div>
+            
+            <div class="music-item">
+                <div class="music-title">Sonata in F Minor, K19</div>
+                <div class="music-category">Domenico Scarlatti</div>
+                <div class="video-container">
+                    <div style="padding:81.76% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1130636362?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Sonata in F Minor, K19 (Domenico Scarlatti)"></iframe></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="certificates-section">
+            <div class="certificates-box">
+                <h2 class="box-title">Piano - Trinity College London</h2>
+                <div class="certificates-grid">
+                    <div class="certificate-card" onclick="openLightbox(0)">
+                        <h3 class="certificate-title">Grade 6 Distinction</h3>
+                        <div class="certificate-thumbnail">
+                            <img src="Website Content/Certificates/Music/Grade 6 Distinction Piano Trinity College London.jpg" alt="Grade 6 Piano">
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card" onclick="openLightbox(1)">
+                        <h3 class="certificate-title">Grade 4 Distinction</h3>
+                        <div class="certificate-thumbnail">
+                            <img src="Website Content/Certificates/Music/Grade 4 Distinction Piano Trinity College London.jpg" alt="Grade 4 Piano">
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card" onclick="openLightbox(2)">
+                        <h3 class="certificate-title">Grade 3 Distinction</h3>
+                        <div class="certificate-thumbnail">
+                            <img src="Website Content/Certificates/Music/Grade 3 Distinction Piano Trinity College London.HEIC.jpg" alt="Grade 3 Piano">
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card" onclick="openLightbox(3)">
+                        <h3 class="certificate-title">Grade 2 Distinction</h3>
+                        <div class="certificate-thumbnail">
+                            <img src="Website Content/Certificates/Music/Grade 2 Distinction Piano Trinity College London.HEIC.jpg" alt="Grade 2 Piano">
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card" onclick="openLightbox(4)">
+                        <h3 class="certificate-title">Grade 1 Distinction</h3>
+                        <div class="certificate-thumbnail">
+                            <img src="Website Content/Certificates/Music/Grade 1 Distinction Piano Trinity College London.jpg" alt="Grade 1 Piano">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certificates-box">
+                <h2 class="box-title">Music Theory - ABRSM</h2>
+                <div class="certificates-grid">
+                    <div class="certificate-card" onclick="openLightbox(5)">
+                        <h3 class="certificate-title">Grade 5 Distinction</h3>
+                        <div class="certificate-thumbnail">
+                            <img src="Website Content/Certificates/Music/Grade 5 Distinction Music Theory (ABRSM).png" alt="Grade 5 Theory">
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card" onclick="openLightbox(6)">
+                        <h3 class="certificate-title">Grade 4 Distinction</h3>
+                        <div class="certificate-thumbnail">
+                            <img src="Website Content/Certificates/Music/Grade 4 Distinction Music Theory (ABRSM).png" alt="Grade 4 Theory">
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card" onclick="openLightbox(7)">
+                        <h3 class="certificate-title">Grade 3 Distinction</h3>
+                        <div class="certificate-thumbnail">
+                            <img src="Website Content/Certificates/Music/Grade 3 Distinction Music Theory (ABRSM).HEIC.jpg" alt="Grade 3 Theory">
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card" onclick="openLightbox(8)">
+                        <h3 class="certificate-title">Grade 2 Distinction</h3>
+                        <div class="certificate-thumbnail">
+                            <img src="Website Content/Certificates/Music/Grade 2 Distinction Music Theory (ABRSM).HEIC.jpg" alt="Grade 2 Theory">
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card" onclick="openLightbox(9)">
+                        <h3 class="certificate-title">Grade 1 Distinction</h3>
+                        <div class="certificate-thumbnail">
+                            <img src="Website Content/Certificates/Music/Grade 1 Distinction Music Theory (ABRSM).jpg" alt="Grade 1 Theory">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-title" id="lightbox-title"></span>
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <button class="lightbox-nav prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="lightbox-nav next" onclick="changeSlide(1)">&#10095;</button>
+            <img id="lightbox-img" src="" alt="">
+        </div>
+    </div>
+    
+    <script>
+        const certificates = [
+            { title: "Grade 6 Distinction Piano Trinity College London", src: "Website Content/Certificates/Music/Grade 6 Distinction Piano Trinity College London.jpg" },
+            { title: "Grade 4 Distinction Piano Trinity College London", src: "Website Content/Certificates/Music/Grade 4 Distinction Piano Trinity College London.jpg" },
+            { title: "Grade 3 Distinction Piano Trinity College London", src: "Website Content/Certificates/Music/Grade 3 Distinction Piano Trinity College London.HEIC.jpg" },
+            { title: "Grade 2 Distinction Piano Trinity College London", src: "Website Content/Certificates/Music/Grade 2 Distinction Piano Trinity College London.HEIC.jpg" },
+            { title: "Grade 1 Distinction Piano Trinity College London", src: "Website Content/Certificates/Music/Grade 1 Distinction Piano Trinity College London.jpg" },
+            { title: "Grade 5 Distinction Music Theory ABRSM", src: "Website Content/Certificates/Music/Grade 5 Distinction Music Theory (ABRSM).png" },
+            { title: "Grade 4 Distinction Music Theory ABRSM", src: "Website Content/Certificates/Music/Grade 4 Distinction Music Theory (ABRSM).png" },
+            { title: "Grade 3 Distinction Music Theory ABRSM", src: "Website Content/Certificates/Music/Grade 3 Distinction Music Theory (ABRSM).HEIC.jpg" },
+            { title: "Grade 2 Distinction Music Theory ABRSM", src: "Website Content/Certificates/Music/Grade 2 Distinction Music Theory (ABRSM).HEIC.jpg" },
+            { title: "Grade 1 Distinction Music Theory ABRSM", src: "Website Content/Certificates/Music/Grade 1 Distinction Music Theory (ABRSM).jpg" }
+        ];
+        
+        let currentIndex = 0;
+        
+        function openLightbox(index) {
+            currentIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const title = document.getElementById('lightbox-title');
+            
+            img.src = certificates[currentIndex].src;
+            title.textContent = certificates[currentIndex].title;
+            lightbox.classList.add('active');
+        }
+        
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.getElementById('lightbox-img').src = '';
+        }
+        
+        function changeSlide(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = certificates.length - 1;
+            if (currentIndex >= certificates.length) currentIndex = 0;
+            
+            const img = document.getElementById('lightbox-img');
+            const title = document.getElementById('lightbox-title');
+            img.src = certificates[currentIndex].src;
+            title.textContent = certificates[currentIndex].title;
+        }
+        
+        // Close lightbox when clicking outside the content
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'ArrowLeft') changeSlide(-1);
+                if (e.key === 'ArrowRight') changeSlide(1);
+                if (e.key === 'Escape') closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html> 

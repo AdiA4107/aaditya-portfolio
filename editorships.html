@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editorships - Aaditya Agarwal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #800000;
+            color: #ffffff;
+        }
+        
+        .page-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .back-button:hover {
+            color: #f0f0f0;
+        }
+        
+        .page-title {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .page-description {
+            text-align: center;
+            color: #f0f0f0;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        
+        .publication-section {
+            margin-bottom: 4rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-role {
+            color: #dddddd;
+            font-size: 1rem;
+        }
+        
+        .section-description {
+            color: #f0f0f0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 1rem auto 0;
+            font-style: italic;
+        }
+        
+        .editions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            justify-items: center;
+        }
+        
+        .twib-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            justify-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .edition-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .edition-cover {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #ffffff;
+        }
+        
+        .edition-cover:hover {
+            transform: translateY(-10px) scale(1.08);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+        }
+        
+        .edition-label {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #ffffff;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-content">
+        <a href="index.html" class="back-button">← Back to Portfolio</a>
+        
+        <h1 class="page-title">Editor-in-Chief</h1>
+        <p class="page-description">Chief Editor of 3 school publications (Cathedral Cares, The World in Brief and Mathematica) read by 600+ students, facilitating article curation, magazine designing, and editing content.</p>
+        
+        <!-- Cathedral Cares Section -->
+        <div class="publication-section">
+            <div class="section-header">
+                <h2 class="section-title">Cathedral Cares</h2>
+                <p class="section-role">Editor-in-Chief</p>
+                <p class="section-description">Cathedral Cares is a social justice magazine aiming to encourage student-volunteering by spreading awareness on important issues such as educational inequity and financial illiteracy among the student body.</p>
+            </div>
+            <div class="editions-grid">
+                <div class="edition-item" onclick="window.open('Website Content/Cathedral Cares/Cathedral Cares July Edition copy.pdf', '_blank')">
+                    <img src="Website Content/Cathedral Cares Covers/July CC.png" alt="Cathedral Cares July" class="edition-cover">
+                    <div class="edition-label">July Edition</div>
+                </div>
+                <div class="edition-item" onclick="window.open('Website Content/Cathedral Cares/Cathedral Cares August Edition Final copy.pdf', '_blank')">
+                    <img src="Website Content/Cathedral Cares Covers/August CC.png" alt="Cathedral Cares August" class="edition-cover">
+                    <div class="edition-label">August Edition</div>
+                </div>
+                <div class="edition-item" onclick="window.open('Website Content/Cathedral Cares/Cathedral Cares September Edition copy.pdf', '_blank')">
+                    <img src="Website Content/Cathedral Cares Covers/September CC.png" alt="Cathedral Cares September" class="edition-cover">
+                    <div class="edition-label">September Edition</div>
+                </div>
+                <div class="edition-item" onclick="window.open('Website Content/Cathedral Cares/Cathedral Cares - October Edition copy.pdf', '_blank')">
+                    <img src="Website Content/Cathedral Cares Covers/Cathedral Cares October Cover.png" alt="Cathedral Cares October" class="edition-cover">
+                    <div class="edition-label">October Edition</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- The World in Brief Section -->
+        <div class="publication-section">
+            <div class="section-header">
+                <h2 class="section-title">The World in Brief</h2>
+                <p class="section-role">Editor-in-Chief</p>
+                <p class="section-description">The World in Brief is a public policy and international relations based newsletter founded to spread global awareness among the student body - through highlighting the most important events of the past, present and future.</p>
+            </div>
+            <div class="twib-grid">
+                <div class="edition-item" onclick="window.open('Website Content/The World in Brief/The World In Brief - The Symposium Newsletter (May Edition) copy.pdf', '_blank')">
+                    <img src="Website Content/TWIB Covers/May.png" alt="The World in Brief May" class="edition-cover">
+                    <div class="edition-label">May Edition</div>
+                </div>
+                <div class="edition-item" onclick="window.open('Website Content/The World in Brief/The World In Brief - The Symposium Newsletter (June Edition) copy.pdf', '_blank')">
+                    <img src="Website Content/TWIB Covers/June.png" alt="The World in Brief June" class="edition-cover">
+                    <div class="edition-label">June Edition</div>
+                </div>
+                <div class="edition-item" onclick="window.open('Website Content/The World in Brief/The World In Brief - The Symposium Newsletter (July Edition) copy.pdf', '_blank')">
+                    <img src="Website Content/TWIB Covers/July.png" alt="The World in Brief July" class="edition-cover">
+                    <div class="edition-label">July Edition</div>
+                </div>
+                <div class="edition-item" onclick="window.open('Website Content/The World in Brief/The World In Brief - The Symposium Newsletter (August Edition) (1) copy.pdf', '_blank')">
+                    <img src="Website Content/TWIB Covers/August.png" alt="The World in Brief August" class="edition-cover">
+                    <div class="edition-label">August Edition</div>
+                </div>
+                <div class="edition-item" onclick="window.open('Website Content/The World in Brief/The World In Brief - The Symposium Newsletter (September Edition) copy.pdf', '_blank')">
+                    <img src="Website Content/TWIB Covers/September.png" alt="The World in Brief September" class="edition-cover">
+                    <div class="edition-label">September Edition</div>
+                </div>
+                <div class="edition-item" onclick="window.open('Website Content/The World in Brief/The World In Brief - The Symposium Newsletter (October Edition) (3).pdf', '_blank')">
+                    <img src="Website Content/TWIB Covers/October.png" alt="The World in Brief October" class="edition-cover">
+                    <div class="edition-label">October Edition</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mathematica Section -->
+        <div class="publication-section">
+            <div class="section-header">
+                <h2 class="section-title">Mathematica</h2>
+                <p class="section-role">Editor-in-Chief</p>
+                <p class="section-description">Mathematica was founded to foster a sense of appreciation for higher-order mathematical problems through selecting problems from famous competitions and providing rigorous solutions, along with highlighting important applications of math across various fields.</p>
+            </div>
+            <div class="editions-grid">
+                <div class="edition-item" onclick="window.open('Website Content/Mathematica/Mathematica - July Edition.pdf', '_blank')">
+                    <img src="Website Content/Mathematica Covers/Mathematica July.png" alt="Mathematica July" class="edition-cover">
+                    <div class="edition-label">July Edition</div>
+                </div>
+                <div class="edition-item" onclick="window.open('Website Content/Mathematica/Mathematica - August Edition.pdf', '_blank')">
+                    <img src="Website Content/Mathematica Covers/August.png" alt="Mathematica August" class="edition-cover">
+                    <div class="edition-label">August Edition</div>
+                </div>
+                <div class="edition-item" onclick="window.open('Website Content/Mathematica/Mathematica - September Edition.pdf', '_blank')">
+                    <img src="Website Content/Mathematica Covers/September.png" alt="Mathematica September" class="edition-cover">
+                    <div class="edition-label">September Edition</div>
+                </div>
+                <div class="edition-item" onclick="window.open('Website Content/Mathematica/Mathematica - October Edition.pdf', '_blank')">
+                    <img src="Website Content/Mathematica Covers/October.png" alt="Mathematica October" class="edition-cover">
+                    <div class="edition-label">October Edition</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
